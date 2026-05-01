@@ -1,0 +1,12 @@
+2026-05-01 20:02:05 [main] INFO  UserEndpointTests - ********New user creation triggered********
+2026-05-01 20:02:09 [main] INFO  UserEndpointTests - ********New user created********
+2026-05-01 20:02:10 [main] INFO  UserEndpointTests - ********user update triggered********
+2026-05-01 20:02:14 [main] INFO  UserEndpointTests - ********user update done********
+2026-05-01 20:02:14 [main] INFO  UserEndpointTests - ********User deletion triggered********
+2026-05-01 20:02:15 [main] INFO  UserEndpointTests - ********User deleted********
+2026-05-01 20:29:14 [main] INFO  UserEndpointTests - ********New user creation triggered********
+2026-05-01 20:29:18 [main] INFO  UserEndpointTests - ********New user created********
+2026-05-01 20:29:19 [main] INFO  UserEndpointTests - ********user update triggered********
+2026-05-01 20:29:23 [main] INFO  UserEndpointTests - ********user update done********
+2026-05-01 20:29:23 [main] INFO  UserEndpointTests - ********User deletion triggered********
+2026-05-01 20:29:24 [main] INFO  UserEndpointTests - ********User deleted********

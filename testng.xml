@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <listeners>
+        <listener class-name="api.utilities.ExtentReportTestManager"/>
+    </listeners>
+    <test verbose="2" preserve-order="true" name="C:/Springboot-Learning/APITestingDevTS/src/test/java/api/test">
+
+        <classes>
+           <!-- <class name="api.test.DDTests">
+
+                <methods>
+                    <include name="testCreateUser_DD"/>
+                    <include name="testGetUsers_DD"/>
+                    <include name="testDeleteUsers_DD"/>
+                </methods>
+            </class>-->
+            <class name="api.test.UserEndpointTests">
+                <methods>
+                    <include name="testCreateUser"/>
+                    <include name="testGetUserDetails"/>
+                    <include name="testUpdateUser"/>
+                    <include name="testDeleteUser"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
