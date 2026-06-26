@@ -10,7 +10,9 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import static org.hamcrest.Matchers.equalTo;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
 
 public class UserEndpointTests {
 
@@ -73,8 +75,7 @@ public class UserEndpointTests {
 
     }
 
-    @
-    Test(priority = 4)
+    @Test(priority = 4)
     public void testDeleteUser() {
 
         logger.info("********User deletion triggered********");
@@ -84,5 +85,74 @@ public class UserEndpointTests {
 
     }
 
+
+    @Test
+    void reverseWordsInString()
+    {
+        String str = "Welcome to Java";
+
+        String splitStr[] = str.split(" ");
+        String revStr="";
+        for(String s: splitStr) {
+            String revWord = "";
+            for(int i=s.length()-1;i>=0;i--) {
+                revWord = revWord+s.charAt(i);
+            }
+            revStr=revStr+revWord+" ";
+        }
+
+        System.out.println(revStr);
+    }
+
+    @Test
+    void numOfOccurrencesChar() {
+        String str = "Welcome to Java";
+
+        char c = 'e';
+        int count=0;
+        for(int i=0;i<str.length();i++) {
+
+            if(str.charAt(i)==c)
+                count++;
+        }
+        System.out.println(count+" is the number of occurences of "+c+" in given string");
+    }
+
+    @Test
+    void numOfOccurrencesWord() {
+        String str = "Welcome to Java Java";
+
+        String c = "Java";
+
+        String splitStr[] = str.split(" ");
+        int count=0;
+
+        for(String s: splitStr) {
+            if(s.equals(c))
+                count++;
+
+        }
+        System.out.println(count+" is the number of occurences of "+c+" in given string");
+    }
+
+    @Test
+    void duplicateWords() {
+        String str = "Find the duplicates in in string string string string string";
+
+        String[] splitStr = str.split(" ");
+
+        HashSet<String> set = new HashSet<>();
+        List<String> toBeIgnored = new ArrayList<>();
+
+        for(String s: splitStr) {
+            if(!toBeIgnored.contains(s)) {
+                if (!set.add(s)) {
+                    toBeIgnored.add(s);
+                    System.out.println("Found duplicate word " + s);
+                }
+            }
+        }
+        System.out.println(set);
+    }
 
 }
